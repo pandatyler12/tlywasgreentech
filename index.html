@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-site-verification" content="K3HQvlWunMVun5iq23miOCzIQAury7u5559eEkLvNvc" />
+    <title>Tlywasa - Innovation for Environmental Conservation</title>
+    <link rel="icon" href="tylwas_logo.jpg" type="image/png" sizes="32x32">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --green-dark: #1b4d3e;
+            --green: #2a7a4a;
+            --green-light: #a5d6a7;
+            --gray-dark: #2f2f2f;
+            --gray-medium: #4a4a4a;
+            --white: #ffffff;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --transition: 0.3s ease;
+            --border-radius: 12px;
+            --max-width: 1200px;
+        }
+
+        /* Base and Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--gray-dark);
+            background-color: var(--green-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            color: var(--green-dark);
+            margin: 0.5em 0;
+        }
+
+        a {
+            color: var(--green-dark);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        a:hover {
+            color: var(--green);
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--green-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: var(--border-radius);
+            transition: background-color var(--transition);
+        }
+
+        nav a:hover {
+            background-color: var(--green-light);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--white);
+            color: var(--green-dark);
+            padding: 4rem 1rem;
+            text-align: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: var(--gray-medium);
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 650px;
+            margin-bottom: 3rem;
+            border-radius: var(--border-radius);
+        }
+
+        .btn-primary {
+            background-color: var(--green);
+            color: var(--white);
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(42, 122, 74, 0.6);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 14px 28px rgba(42, 122, 74, 0.8);
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+            transition: box-shadow var(--transition);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-card .content {
+            padding: 1rem;
+        }
+
+        .product-card .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--green-dark);
+        }
+
+        .product-card .description {
+            color: var(--gray-medium);
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+
+        .product-card .price {
+            font-size: 1.2rem;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            max-width: 600px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--green-light);
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: var(--green);
+            color: var(--white);
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color var(--transition);
+        }
+
+        .contact-form button:hover {
+            background-color: var(--green-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--green-dark);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .product-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <img src="tylwas_logo.jpg" alt="Tlywasa Logo" style="height: 60px;" />
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to Tlywasa</h1>
+        <p>Innovating sustainable energy solutions for a greener future.</p>
+        <img src="aquaspark generator.jpg" alt="Aquaspark Generator" />
+        <button class="btn-primary" onclick="document.getElementById('product').scrollIntoView({ behavior: 'smooth' })">
+            Explore Our Generator
+        </button>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="product-section">
+        <h2>Our Product</h2>
+        <div class="product-card">
+            <img src="aquaspark generator.jpg" alt="Aquaspark Generator" />
+            <div class="content">
+                <h3 class="title">Aquaspark Generator</h3>
+                <p class="description">A cutting-edge, eco-friendly generator designed for sustainable energy solutions. Perfect for both home and business use, Aquaspark generates reliable energy while conserving the environment.</p>
+                <div class="price">$336.00</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="tel" name="phone" placeholder="Your Phone" />
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Tlywasa | All Rights Reserved</p>
+</footer>
+
+<script>
+    // Simple form submission handler
+    document.querySelector('.contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert('Thank you for reaching out! We will get back to you soon.');
+    });
+</script>
+
+</body>
+
+</html>
